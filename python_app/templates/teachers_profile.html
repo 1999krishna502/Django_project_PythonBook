@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/db0279e7df.js" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+    #div
+       {
+       width:500px;height:600px;
+       box-shadow:1px 4px 5px 2px lightgray;
+       border-radius:15px;
+       position:absolute;
+       top:180px;
+       right:300px;
+       }
+  </style>
+</head>
+<body>
+
+<!-- top navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border border-outline">
+  <div class="container-fluid" style="height:40px;float:left">
+    <a class="navbar-brand" href="#" style="color: rgb(57, 25, 116);margin-bottom:15px;"><i class="fa-brands fa-python fa-2x" style=""></i> PythonBook</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/python_app/teachers_register/">register</a>
+        </li>
+
+      </ul>
+      <form class="d-flex">
+        <div  class="container-fluid">
+          <a class="navbar-brand" href="#" style="color: rgb(1, 13, 24);"><i class="fa-brands fa-instagram fa-1x"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color: rgb(1, 13, 24);"><i class="fa-brands fa-github fa-1x"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </form>
+      <form class="d-flex bg-secondary p-1 m-2" >
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button  class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <a href="http://127.0.0.1:8000/python_app/teachers_login/"> <button type="button" class="btn btn-light">My Profile</button></a>
+    </div>
+  </div>
+</nav>
+<!-- end of nav bar -->
+
+<form method="post" enctype="multipart/form-data" >{% csrf_token %}
+  <div class="container-md p-4">
+    <table>
+      <h3 style="color:green">Welcome {{a.name}}: Teacher<p></p></h3>
+      <hr>
+      <tr>
+        <th>Name<p style="margin-top:8px;"><input class="form-control" type="text" name="fullname" value="{{a.name}}"  ></p></th>
+      </tr>
+      <tr>
+        <th>Email<p style="margin-top:8px"><input class="form-control" type="email" name="email"  value="{{a.email}}"></p></th>
+      </tr>
+      <tr>
+
+        <th>
+          <p>to change password and edit your details click Edit...</p>
+          <a  class="btn btn-success" type="submit" href="http://127.0.0.1:8000/python_app/teachers_profile_edit/{{a.id}}" style="position:absolute;top:400px;">Edit</a>
+        </th>
+      </tr>
+
+      <tr>
+        <th>
+          <a class="btn btn-success" type="submit" style="position:absolute;top:400px;left:200px;" href="http://127.0.0.1:8000/python_app/teachers_profile_delete/{{a.id}}">delete</a>
+        </th>
+      </tr>
+    </table>
+
+    <div id="div" class="container-md p-4">
+      <h3 style="color:green">Upload Here...</h3>
+      <hr>
+      <p><b>You can upload information ....</b></p>
+      <a class="btn btn-success" type="submit" style="position:absolute;top:160px;left:50px;" href="http://127.0.0.1:8000/python_app/teacher_video_notes_upload/">Video and notes upload</a>
+      <a class="btn btn-success" type="submit" style="position:absolute;top:160px;left:260px;" href="http://127.0.0.1:8000/python_app/teacher_video_notes_display/">Video and notes display</a>
+      <hr style="margin-top:100px;">
+      <a class="btn btn-success" type="submit" style="position:absolute;top:260px;left:50px;" href="http://127.0.0.1:8000/python_app/teacher_news_feed_upload/">News upload</a>
+      <a class="btn btn-success" type="submit" style="position:absolute;top:260px;left:260px;" href="http://127.0.0.1:8000/python_app/teachers_news_feed_display/">News display</a>
+    </div>
+
+      <a href="http://127.0.0.1:8000/python_app/teacher_logout/" class="btn btn-success" style="position:absolute;right:18px;bottom:2px;">logout</a>
+
+
+
+  </div>
+</form>
+
+</body>
+</html>

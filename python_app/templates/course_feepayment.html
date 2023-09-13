@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/db0279e7df.js" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         #m:hover{transform: scale(1.1);}
+        #M:hover{transform: scale(1.1);}
+        #mm:hover{transform: scale(1.1);}
+
+
+      li a:hover{
+            transform: scale(1.2);
+        }
+      #a:hover{
+            transform: scale(1.2);
+      }
+
+         #div
+        {
+        width:500px;height:460px;
+        margin-top:60px;
+        box-shadow:1px 4px 5px 2px lightgray;
+        border-radius:15px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--nav bar start-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border border-outline">
+    <div class="container-fluid" style="height:60px;float:left">
+        <a class="navbar-brand" href="#" style="color: rgb(57, 25, 116);"><a class="btn " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <i class="fa-brands fa-python fa-2x"></i></a>PythonBook</a>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <img id="pic" src="{% static 'pic.jpg.png' %}">
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style="position:absolute;top:28px;right:25px;"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="div" style="height:770px;width:300px;float: left;margin-top:120px;margin-left:60px;" >
+                    <ul>
+                        <h5>Python Tutorial </h5>
+                        <h6>Core Python</h6>
+                        <li><a href="">Introduction to Python</a></li>
+                        <li><a href="">Data types</a></li>
+                        <li><a href="">Variables</a></li>
+                        <li><a href="">Print & Input Funtion</a></li>
+                        <li><a href="">Operators</a></li>
+                        <li><a href="">Conditional Statements</a></li>
+                        <li><a href="">Looping</a></li>
+                        <li><a href="">Pattern Printing</a></li>
+                        <li><a href="">Funtions</a></li>
+                        <li><a href="">Set and List</a></li>
+                        <li><a href="">Touple</a></li>
+                        <li><a href="">Dictionary</a></li>
+                        <li><a href="">Modules and Pacages</a></li>
+                    </ul>
+                    <ul>
+                        <h6>Advanced Python</h6>
+                        <li><a href="">OOPS concept</a></li>
+                        <li><a href="">Inheritance</a></li>
+                        <li><a href="">Regular Expression</a></li>
+                        <li><a href="">MySQL</a></li>
+                        <li><a href="">Exception Handling</a></li>
+                        <li><a href="">Multithreading</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Info</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Course</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Core Python</a></li>
+                        <li><a class="dropdown-item" href="#">Advanced Python</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/python_app/course_registration/">Course Registration</a>
+                </li>
+            </ul>
+
+
+        <form class="d-flex">
+          <div  class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: rgb(1, 13, 24);"><i class="fa-brands fa-instagram fa-1x"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="container-fluid">
+              <a class="navbar-brand" href="#" style="color: rgb(1, 13, 24);"><i class="fa-brands fa-github fa-1x"></i></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+        </form>
+            <form class="d-flex bg-secondary p-1 m-2" >
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button  class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+            </form>
+            <a href=""> <button type="button" class="btn btn-light">My Profile</button></a>
+<!--welcome Username          -->
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
+  </nav>
+  <!-- end of nav bar -->
+
+<form method="post" >{% csrf_token %}
+    <div id="div" class="container-md p-4">
+        <table>
+            <h3 style="color:green">FEE PAYMENT</h3>
+            <hr>
+            <tr>
+                <th>Email <p style="margin-top:8px"><input class="form-control" type="email" name="email" placeholder="example@gmail.com" value="{{a.email}}"></p></th>
+            </tr>
+            <tr>
+                <th>Course<p style="margin-top:8px"><input class="form-control" type="text" name="course" style="width:450px;margin-top:10px" value="{{a.course}}" ></p></th>
+            </tr>
+            <tr>
+                <th>Amount<p style="margin-top:8px"><input class="form-control" type="number" name="amount" value={{a.amount}} style="width:450px;margin-top:10px"></p></th>
+            </tr>
+            <tr>
+                <th style=""><a href=""></a><button type="submit" class="btn btn-success" style="margin-top:20px;margin-left:180px">Submit</button></th>
+            </tr>
+
+        </table>
+    </div>
+</form>
+
+</body>
+</html>

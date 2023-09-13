@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>-->
+    <script src="https://kit.fontawesome.com/db0279e7df.js" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title>Python Book</title>
+    <style>
+        #m:hover{transform: scale(1.1);}
+        #M:hover{transform: scale(1.1);}
+        #mm:hover{transform: scale(1.1);}
+      li a:hover{
+            transform: scale(1.2);
+        }
+      #a:hover{
+            transform: scale(1.2);
+      }
+      h5{
+        margin: 0px;
+        padding-top:10px;
+      }
+      #z{
+        margin-left:300px;
+        height:300px;
+        width:300px;
+        float:left;
+        color:green;
+      }
+      .accordion{
+        margin-left:1000px;
+      }
+      #carousel{
+        background-color: blue;
+        position:absolute;
+        top: 10px;
+        float:left;
+        margin-left: 200px;
+        margin-top:50px;
+        width:800px;
+        height:300px;
+      }
+
+     #m{
+      position:relative;
+      float:left;
+      text-align: center;
+      margin-left:100px;
+      width:300px;
+      height:290px;
+      margin-top:140px;
+      padding-top:60px;
+      padding-left:50px;
+      padding-right:50px;
+      box-shadow: 2px rgb(136, 152, 241) ;
+      border-radius: 2px;
+      background-color: aliceblue;
+     }
+     #M
+     {
+      position: relative;
+
+      float:left;
+      text-align:center;
+      width:300px;
+      height:280px;
+      margin-left:40px;
+      margin-top:80px;
+      padding-top:60px;
+      padding-left:50px;
+      padding-right:50px;
+      box-shadow: 2px rgb(55, 61, 95) ;
+      border-radius: 2px;
+      background-color: rgb(245, 245, 236);
+     }
+     #mm
+     {
+      position: relative;
+      float:left;
+      text-align:center;
+      width:300px;
+      height:280px;
+      margin-left:40px;
+      margin-top:140px;
+      padding-top:30px;
+      padding-left:50px;
+      padding-right:50px;
+      box-shadow: 2px rgb(55, 61, 95) ;
+      border-radius: 2px;
+      background-color: aliceblue;
+     }
+      #q
+      {
+        background-color: white;
+        height:300px;
+        width:800px;
+        margin-top: 100px;
+        margin-left: 300px;
+        position: absolute;
+        text-align: center;
+      }
+      #k{
+        height:450px;
+        margin-left: 1010px;
+        margin-top:20px;
+        background-color: rgb(252, 252, 252);
+        width: 18rem;
+        position:absolute;
+        top:40px;
+        text-align: center;
+      }
+      #news{
+        height:500px;
+        width: 220px;
+        background-color: rgb(252, 252, 252);
+        position:absolute;
+        top:70px;
+        right:1px;
+
+        }
+        #box{
+        height:600px;
+        }
+    </style>
+</head>
+<body>
+
+           <!-- top navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border border-outline">
+    <div class="container-fluid" style="height:40px;float:left">
+        <a class="navbar-brand" href="#" style="color: rgb(57, 25, 116);margin-bottom:15px;"><i class="fa-brands fa-python fa-2x" style=""></i> PythonBook</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/python_app/teachers_info/">Teachers Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Register
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/python_app/teachers_register/">Teachers Register</a></li>
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/python_app/register/"> Student Register</a></li>
+
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/python_app/admin_login/">Admin</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <div  class="container-fluid">
+                    <a class="navbar-brand" href="#" style="color: rgb(1, 13, 24);"><i class="fa-brands fa-instagram fa-1x"></i></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#" style="color: rgb(1, 13, 24);"><i class="fa-brands fa-github fa-1x"></i></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </form>
+            <form class="d-flex bg-secondary p-1 m-4"  >
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button  class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div class="dropdown" style="margin-right:30px;">
+                <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Login
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="http://127.0.0.1:8000/python_app/teachers_login/">Teachers Login</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:8000/python_app/login/">Students Login</a></li>
+                </ul>
+            </div>
+<!--            <a href="http://127.0.0.1:8000/python_app/login/"> <button type="button" class="btn btn-light">Login</button></a>-->
+        </div>
+    </div>
+  </nav>
+  <!-- end of nav bar -->
+
+    <div class="div bg-light" style="height:770px;width:200px;float: left;" >
+       <ul>
+           <h5>Python Tutorial </h5>
+           <hr>
+           <h6>Core Python</h6><hr>
+
+           <div><p>Introduction to python</p></div>
+           <div><p>Data types</p></div>
+               <div><p>Variables</p></div>
+               <div><p>Print & Input Funtion</p></div>
+               <div><p>Operators</p></div>
+               <div><p>Conditional Statements</p></div>
+               <div><p>Looping</p></div>
+               <div><p>Pattern Printing</p></div>
+               <div><p>Functions</p></div>
+               <div><p>Set and List</p></div>
+               <div><p>Tuple</p></div>
+               <div><p>Dictionary</p></div>
+               <div><p>Modules and Packages</p></div>
+           </ul>
+     <ul>
+         <br>
+    <h6>Advanced Python</h6><hr>
+
+         <div><p>OOPS concept</p></div>
+    <div><p>Inheritance</p></div>
+             <div><p>Regular Expression</p></div>
+             <div><p>MySQL</p></div>
+             <div><p>Exception Handling</p></div>
+             <div><p>Multithreading</p></div>
+    </ul>
+    </div>
+
+<!-- carousle -->
+
+<div id="carousel">
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'image1.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Code</h5>
+          <p>First solve the problem and Then write the code</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'image2.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Python</h5>
+          <p>Simple is better than complex. Complex is better than complicated</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'image3.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Developer</h5>
+          <p>Don't worry if it doesn't work right. if everything did, you'd be out of job</p>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</div>
+
+    <!-- About Start -->
+    <div class="container-xxl py-5" style="margin-top:500px">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'about.jpg' %}" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6><hr>
+                    <h1 class="mb-4">Welcome to eLEARNING</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+  <div id="k">
+      <div  class="card m-2 " style="">
+          <img src="{% static 'images.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">Trial videos</h5>
+              <p class="card-text">7+ videos must watch before get into the class which helps you to get idea about Python</p>
+              <a href="#" class="btn btn-primary">click here</a>
+          </div>
+      </div>
+  </div>
+           <div id="news">
+               <h2 style="text-align:center;font-size:18px;">Notice</h2><hr>
+               {% for i in a %}
+               <h5 style="color:blue">{{i.topic}}</h5>
+               <p>{{i.content}}<br>{{i.date}}</p>
+               <p></p>
+               {% endfor %}
+           </div>
+           <div id="box" class="container-md p-4 ">
+               <h2 align="center">Basics of Python</h2>
+               <hr>
+                  <div id="m">
+                      <i class="fa-brands fa-python fa-2x"></i>
+                      <h3>Python</h3>
+                      <p>Python is an Experiment in how much freedom programmers need.</p>
+                      <a href="#"> <button id="a" type="button" class="btn btn-primary">Know more</button></a>
+                  </div>
+                  <div id="M">
+                      <i class="fa-solid fa-layer-group fa-2x"></i>
+                      <h3>MySql</h3>
+                      <p>Mysql is an open-source relational database management system</p>
+                      <a href="#"> <button id="a" type="button" class="btn btn-primary">Know more</button></a>
+                  </div>
+               <div id="mm">
+                   <i class="fa-solid fa-users fa-2x"></i>
+                   <h3>Advanced Python</h3>
+                   <p>High-level ,object-oriented Programming Language that is recently been picked-up</p>
+                   <a href="#"> <button id="a" type="button" class="btn btn-primary">Know more</button></a>
+               </div>
+           </div>
+
+
+           <!-- Courses Start -->
+    <div id="course" class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
+                <h1 class="mb-5">Popular Courses</h1>
+                <hr>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="{% static 'course-1.jpg' %}" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="{% static 'course-2.jpg' %}" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="{% static 'course-3.jpg' %}" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+
+    <div id="q">
+        <h5>Have may i help you?</h5>
+        <p>Find quick answers to your questions and get the most out of PythonBook with our step-by-step docs and troubleshooting tips.</p>
+        <button  type="button" class="btn btn-outline-primary">Help!</button><br><br><br>
+        <a class="navbar-brand" href="#" style="color: rgb(57, 25, 116);"><i class="fa-brands fa-python"></i> PythonBook</a>
+    </div>
+
+</body>
+</html>
